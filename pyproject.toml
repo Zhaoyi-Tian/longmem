@@ -1,0 +1,24 @@
+[project]
+name = "memworld"
+version = "0.1.0"
+description = "长程记忆文字世界：测量 agent 记忆的 bench，由少数规则按 seed 生成、没有尽头的文字世界"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+memworld = "memworld.__main__:main"      # 环境：自己玩
+membench = "membench.__main__:main"      # bench：demo / check / curve
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/memworld", "src/membench"]
+
+[tool.ruff]
+line-length = 110
+
+[tool.ruff.lint]
+select = ["F", "E", "W", "B", "UP", "SIM", "I"]

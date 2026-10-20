@@ -1,0 +1,10 @@
+# 难度调高的例子：旧词更多、绕得更远、传话和改口更多，区域更大、嵌套更深
+[memory]
+recall = 0.5
+indirect = 0.5
+relay = 0.5
+revise = 0.3
+
+[structure]
+size = 7
+depth = 2
